@@ -27,7 +27,8 @@ func main() {
 
 	if token == "" {
 		fmt.Println("No token provided. Please run: airhorn -t <bot token>")
-		return
+		token = os.Getenv("token")
+		fmt.Println(token)
 	}
 
 	encode()
